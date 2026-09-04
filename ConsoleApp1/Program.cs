@@ -39,19 +39,22 @@ namespace Lab03
             double currentHpDouble = currentHp;
             Console.WriteLine($"Hp (double): {currentHpDouble}");
 
+            //Casting: HP(double) to int
             Console.WriteLine("\n----- Exact HP Percent (no integer truncation) -----");
             double hpPercentExact = currentHpDouble * 100 / maxHp;
             Console.WriteLine($"HP Percent(exact): { hpPercentExact}%");
 
+            //Explicit Cast: Attack Power(float) to int
             Console.WriteLine("\n----- Explicit Cast: Attack Power -> Display Int -----");
             int attackDisplay = (int)attackPower;
             Console.WriteLine($"Attack Power (int cast): {attackDisplay}");
 
+            //casting vs convert: Crit Multiplier
             Console.WriteLine("\n----- Cast vs Convert: Crit Multiplier -----");
-            int critMultiplier = (int)critMultiplier;
-            int critMultiplier = (int)Convert.ToInt32(critMultiplier);
-            Console.WriteLine($"Crit Multiplier (cast): {critMultiplier}");
-            Console.WriteLine($"Crit Multiplier (Convert): {critMultiplier}");
+            int critMultiplierAsInt = (int)critMultiplier;
+            int critMultiplierAsIntConverted = Convert.ToInt32(critMultiplier);
+            Console.WriteLine($"Crit Multiplier (cast): {critMultiplierAsInt}");
+            Console.WriteLine($"Crit Multiplier (Convert): {critMultiplierAsIntConverted}");
         }
     }
 }
